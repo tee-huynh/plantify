@@ -13,7 +13,7 @@ const svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform", `translate(${width/2},${height/2+100})`); // Add 100 on Y translation, cause upper bars are longer
 
-d3.csv("js/plays.csv").then( function(data) {
+d3.json("https://raw.githubusercontent.com/tee-huynh/spotifycts/main/js/plays.csv").then( function(data) {
 
   // X scale
   const x = d3.scaleBand()
